@@ -1,0 +1,27 @@
+.chat_page{
+    background-color: var(--BACKGROUND);
+    position: relative;
+    color: white;
+}
+.chat_section_1{
+    height: 100vh;
+}
+.chat_sec{
+    height: 100vh;
+    background-color: var(--BACKGROUND);
+}
+
+.hidden_chat{
+    display: none;
+}
+.show_chat{
+  display: block;
+}
+@media screen and (max-width: 575px) {
+    .chat_section_1{
+        max-width: 100vw;
+    }
+   .chat_section_2{
+    max-width: 100vw;
+   }
+}

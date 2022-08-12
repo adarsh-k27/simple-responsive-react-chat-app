@@ -1,0 +1,39 @@
+.Contact{
+    width: 100%;
+    background-color: rgba(3, 3, 3, 0.2);
+    padding: .5rem 0;
+}
+.selected_chat{
+    width: 100%;
+    padding: .5rem 0;
+    background-color: rgba(82, 82, 223, 0.656);
+}
+.Contact:hover{
+    cursor: pointer;
+}
+.contact_wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+    
+}
+.contact_wrapper img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.online{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+.online_dot{
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 1rem;
+}

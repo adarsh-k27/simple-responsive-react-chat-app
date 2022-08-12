@@ -1,0 +1,13 @@
+.welcome{
+    width: 100%;
+}
+.welcome_loader{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.welcome_loader img{
+    width: auto;
+    height: 10rem;
+}

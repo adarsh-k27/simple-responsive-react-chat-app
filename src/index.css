@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --BACKGROUND:rgba(15, 14, 75, 0.926);
+    --INPUT_FOCUS:rgb(10, 10, 222);
+    --BUTTON_BG:rgb(12, 8, 65);
+    --BACKGROUND_VARIANT:rgba(3, 33, 87, 0.807);
+    --BACKGROUND_BLACK: rgba(3, 3,3, 0.82);
+}
+
+body
+{
+    background-color: var(--BACKGROUND);
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
