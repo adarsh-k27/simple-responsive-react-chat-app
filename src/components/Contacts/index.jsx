@@ -13,9 +13,11 @@ function Contacts ({ users, openChat, socket, logout, currentUser }) {
     }
   }, [selectedChat])
   useEffect(() => {
+    console.log("socket",socket);
     if (socket.current) {
       socket.current.on('get-online-users', online => {
         setOnline(online)
+        console.log("online");
         console.log('online', online)
       })
     }
