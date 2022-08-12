@@ -4,10 +4,10 @@ import { useEffect } from 'react'
 import logo from '../../assets/logo.svg'
 import Contact from '../contact'
 import './style.css'
-function Contacts ({ users, openChat, socket, logout, currentUser }) {
+function Contacts ({ users, openChat, socket, currentUser }) {
   const [online, setOnline] = useState([])
   const [selectedChat, setSelected] = useState('')
-  console.log("online",online);
+  console.log("online",online && online);
   useEffect(() => {
     if (selectedChat !== '') {
       openChat(users[selectedChat])
@@ -16,8 +16,9 @@ function Contacts ({ users, openChat, socket, logout, currentUser }) {
   useEffect(() => {
     console.log("socket",socket);
     if (socket.current) {
-      socket.current.on('get-online-users', online => {
-        setOnline(online)
+      socket.current.on('get-online-users', onlineArray => {
+        console.log("from socket",onlineArray);
+        setOnline(onlineArray)
         
       })
     }
