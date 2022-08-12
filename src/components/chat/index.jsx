@@ -71,7 +71,7 @@ function ChatPage () {
                   users={allUsers}
                   currentUser={currentUser}
                   openChat={setOpenChat}
-                  socket={socket}
+                  socket={ socket && socket}
                   logout={logout}
                 />
               )}

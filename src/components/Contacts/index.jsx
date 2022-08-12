@@ -7,7 +7,7 @@ import './style.css'
 function Contacts ({ users, openChat, socket, currentUser }) {
   const [online, setOnline] = useState([])
   const [selectedChat, setSelected] = useState('')
-  console.log('online', online && online)
+  console.log('online', online.length >=1 && online)
   useEffect(() => {
     if (selectedChat !== '') {
       openChat(users[selectedChat])

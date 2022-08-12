@@ -22,7 +22,7 @@ function Contact ({ user, setSelected, selectedChat, index,online}) {
         </div>
         <div className="online">
            <div className={`${online && "online_dot"}`}></div>
-           <span>{online ? "Online" :"Offline"}</span>
+           <span>{online && "Online" }</span>
         </div>
       </div>
     </div>
