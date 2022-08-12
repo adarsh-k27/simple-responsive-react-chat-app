@@ -82,7 +82,7 @@ function ChatPage () {
               'show_chat' }`}
           >
             <div className='row'>
-              {!openChat && !smallDevice &&  (
+              {!openChat || !smallDevice &&  (
                 <WelcomePage currentUser={currentUser} user={openChat} />
               ) 
               } 
