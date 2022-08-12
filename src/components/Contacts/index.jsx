@@ -7,24 +7,24 @@ import './style.css'
 function Contacts ({ users, openChat, socket, currentUser }) {
   const [online, setOnline] = useState([])
   const [selectedChat, setSelected] = useState('')
-  console.log("online",online && online);
+  console.log('online', online && online)
   useEffect(() => {
     if (selectedChat !== '') {
       openChat(users[selectedChat])
     }
   }, [selectedChat])
   useEffect(() => {
-    console.log("socket",socket);
+    console.log('socket', socket)
     if (socket.current) {
       socket.current.on('get-online-users', onlineArray => {
-        console.log("from socket",onlineArray);
+        console.log("Online Setup Array",onlineArray);
         setOnline(onlineArray)
-        
       })
     }
   }, [])
+
   const checkOnlineStatus = users => {
-    const onlineStatus = online.length >= 0 && online.find(user => user.userId == users._id)
+    const onlineStatus = online && online.find(user => user.userId == users._id)
     return onlineStatus ? true : false
   }
   return (
@@ -49,7 +49,7 @@ function Contacts ({ users, openChat, socket, currentUser }) {
                       index={index}
                       setSelected={setSelected}
                       selectedChat={selectedChat !== '' && selectedChat}
-                      online={ online && checkOnlineStatus(user)}
+                      online={online && checkOnlineStatus(user)}
                     />
                   ))}
               </div>
