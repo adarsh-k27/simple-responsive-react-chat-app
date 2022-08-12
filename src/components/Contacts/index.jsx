@@ -18,7 +18,6 @@ function Contacts ({ users, openChat, socket, logout, currentUser }) {
       socket.current.on('get-online-users', online => {
         setOnline(online)
         console.log("online");
-        console.log('online', online)
       })
     }
   }, [])
@@ -48,7 +47,7 @@ function Contacts ({ users, openChat, socket, logout, currentUser }) {
                       index={index}
                       setSelected={setSelected}
                       selectedChat={selectedChat !== '' && selectedChat}
-                      online={checkOnlineStatus(user)}
+                      online={ online && checkOnlineStatus(user)}
                     />
                   ))}
               </div>

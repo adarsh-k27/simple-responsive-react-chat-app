@@ -6,6 +6,7 @@ function Contact ({ user, setSelected, selectedChat, index,online}) {
   const handleClicked=()=>{
     setSelected(index)
   }
+  console.log("online or not",online);
   return (
     <div
       className={` ${selectedChat !== index ? 'Contact' : 'selected_chat'}`}
