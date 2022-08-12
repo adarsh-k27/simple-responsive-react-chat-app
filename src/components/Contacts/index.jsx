@@ -7,6 +7,7 @@ import './style.css'
 function Contacts ({ users, openChat, socket, logout, currentUser }) {
   const [online, setOnline] = useState([])
   const [selectedChat, setSelected] = useState('')
+  console.log("online",online);
   useEffect(() => {
     if (selectedChat !== '') {
       openChat(users[selectedChat])
@@ -17,12 +18,12 @@ function Contacts ({ users, openChat, socket, logout, currentUser }) {
     if (socket.current) {
       socket.current.on('get-online-users', online => {
         setOnline(online)
-        console.log("online");
+        
       })
     }
   }, [])
   const checkOnlineStatus = users => {
-    const onlineStatus = online.find(user => user.userId == users._id)
+    const onlineStatus = online.length >= 0 && online.find(user => user.userId == users._id)
     return onlineStatus ? true : false
   }
   return (

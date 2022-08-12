@@ -164,8 +164,7 @@ function ChatLoader ({
                     cleanOnEnter
                     onEnter={handleSend}
                     height={20}
-                    maxLength={20}
-                    fontSize={10}
+                    fontSize={14}
                   />
                   <AiOutlineSend className='send-icon' onClick={handleSend} />
                 </div>
