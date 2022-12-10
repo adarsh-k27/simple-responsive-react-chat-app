@@ -33,7 +33,7 @@ function ChatPage () {
   }, [])
 
   useEffect(()=>{
-    socket.current=io('https://react-talk-time-chat.herokuapp.com')
+    socket.current = io("https://react-chat-app-fgz0.onrender.com/");
     socket.current.emit('add-user',currentUser && currentUser._id)
     if(logout){
       console.log("logout happpen");
